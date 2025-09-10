@@ -1,51 +1,54 @@
 name: Trojan VPN Checker
 
-# Pemicu workflow: berjalan setiap jam atau dipicu secara manual
 on:
   schedule:
-    - cron: '0 * * * *'  # Jalankan setiap jam
-  workflow_dispatch:  # Izinkan pemicu manual
+    - cron: '0 * * * *'  # Run every hour
+  workflow_dispatch:  # Allow manual trigger
 
 jobs:
   check-trojan:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout kode di repositori
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      # Instal dependensi
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
-      # Jalankan skrip Trojan checker
       - name: Run Trojan checker
         run: python trojan_checker.py
 
-      # Commit dan push hasil ke repositori
       - name: Commit results
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add active_trojan_urls_*.txt
-          git commit -m "Update active Trojan URLs - $(date -u +'%Y-%m-%d %H:%M:%S UTC')" || echo "No changes to commit"
-          git push
+          if ls active_trojan_urls_*.txt >/dev/null 2>&1; then
+            git add active_trojan_urls_*.txt
+            git commit -m "Update active Trojan URLs - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            git push
+          else
+            echo "No active Trojan URLs found, creating placeholder file"
+            echo "No active Trojan URLs found on $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > no_active_urls.txt
+            git add no_active_urls.txt
+            git commit -m "No active Trojan URLs found - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+            git push
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Unggah hasil sebagai artefak
       - name: Upload results as artifact
         uses: actions/upload-artifact@v4
         with:
           name: trojan-check-results
-          path: active_trojan_urls_*.txt
+          path: |
+            active_trojan_urls_*.txt
+            no_active_urls.txt
           retention-days: 7
