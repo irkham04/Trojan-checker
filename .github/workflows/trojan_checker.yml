@@ -30,8 +30,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add active_trojan_urls_*.txt
-          git commit -m "Update Trojan URLs check - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git add active_trojan_urls.txt
+          git commit -m "Update Trojan URLs check - $(date -u +'%Y-%m-%d %H:%M:%S UTC')" || echo "No changes to commit"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -40,5 +40,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trojan-check-results
-          path: active_trojan_urls_*.txt
+          path: active_trojan_urls.txt
           retention-days: 7
