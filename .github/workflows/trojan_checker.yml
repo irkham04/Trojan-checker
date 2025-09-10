@@ -8,7 +8,7 @@ on:
 
 jobs:
   check-trojan:
-    runs-on: ubuntu-latest  # Gunakan runner Ubuntu terbaru
+    runs-on: ubuntu-latest
 
     steps:
       # Checkout kode di repositori
@@ -31,7 +31,7 @@ jobs:
       - name: Run Trojan checker
         run: python trojan_checker.py
 
-      # Commit dan push hasil ke repositori (opsional)
+      # Commit dan push hasil ke repositori
       - name: Commit results
         run: |
           git config --local user.email "action@github.com"
@@ -42,10 +42,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Unggah hasil sebagai artefak (opsional)
+      # Unggah hasil sebagai artefak
       - name: Upload results as artifact
         uses: actions/upload-artifact@v4
         with:
           name: trojan-check-results
           path: active_trojan_urls_*.txt
-          retention-days: 7  # Simpan artefak selama 7 hari
+          retention-days: 7
