@@ -3,31 +3,51 @@ import re
 import base64
 from datetime import datetime
 import os
+import ssl
 import socket
+import subprocess
 
-# Fungsi untuk memeriksa status server dengan koneksi TCP
+# Bug operator (ganti dengan bug operator yang kamu gunakan)
+BUG_OPERATOR = "cdn.provider.com"  # Contoh, ubah sesuai kebutuhan
+
+# Fungsi untuk memeriksa status server dengan TLS handshake
 def check_server_status(ip_or_host, port):
-    print(f"Memeriksa {ip_or_host}:{port}...")
+    print(f"Memeriksa TLS handshake untuk {ip_or_host}:{port}...")
     try:
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(5)  # Timeout 5 detik untuk koneksi lambat di Indonesia
-        result = sock.connect_ex((ip_or_host, port))
-        sock.close()
-        if result == 0:
-            print(f"Sukses: {ip_or_host}:{port} dapat dijangkau")
-            return True
-        else:
-            print(f"Gagal: {ip_or_host}:{port} mengembalikan kode error {result}")
-            return False
+        context = ssl.create_default_context()
+        with socket.create_connection((ip_or_host, port), timeout=5) as sock:
+            with context.wrap_socket(sock, server_hostname=ip_or_host) as ssock:
+                ssock.settimeout(5)
+                print(f"Sukses: TLS handshake berhasil untuk {ip_or_host}:{port}")
+                # Jika TLS berhasil, coba ping bug operator untuk latensi
+                try:
+                    ping_result = subprocess.run(
+                        ['ping', '-c', '1', BUG_OPERATOR],
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        timeout=5,
+                        text=True
+                    )
+                    if ping_result.returncode == 0:
+                        latency_match = re.search(r'time=(\d+\.\d+) ms', ping_result.stdout)
+                        latency = latency_match.group(1) if latency_match else "Unknown"
+                        print(f"Ping sukses ke {BUG_OPERATOR} (Latensi: {latency} ms)")
+                        return True, latency
+                    else:
+                        print(f"Ping gagal ke {BUG_OPERATOR}, tetapi TLS aktif")
+                        return True, None
+                except Exception as e:
+                    print(f"Error ping ke {BUG_OPERATOR}: {str(e)}")
+                    return True, None
     except Exception as e:
-        print(f"Error saat memeriksa {ip_or_host}:{port}: {str(e)}")
-        return False
+        print(f"Error TLS handshake untuk {ip_or_host}:{port}: {str(e)}")
+        return False, None
 
 # Fungsi untuk memparsing URL Trojan dari teks
 def parse_trojan_urls(data):
     pattern = r'trojan://[a-zA-Z0-9\-]+@[a-zA-Z0-9\.\-]+:[0-9]+(?:\?[^#\s]*)?(?:#[^\s]*)?'
     urls = re.findall(pattern, data)
-    print(f"Ditemukan {len(urls)} URL Trojan: {urls[:5]}...")  # Tampilkan max 5 URL
+    print(f"Ditemukan {len(urls)} URL Trojan: {urls[:5]}...")
     return urls
 
 # Fungsi untuk mengambil IP/hostname dan port dari URL Trojan
@@ -46,7 +66,7 @@ def extract_host_and_port_from_url(url):
 def fetch_from_sub_url(sub_url):
     print(f"Mengambil sub URL: {sub_url}")
     try:
-        response = requests.get(sub_url, timeout=15)  # Timeout 15 detik untuk Indonesia
+        response = requests.get(sub_url, timeout=15)
         response.raise_for_status()
         content = response.text.strip()
         print(f"Isi sub URL (100 karakter pertama): {content[:100]}")
@@ -99,10 +119,10 @@ def main():
         if not host or not port:
             print(f"Melewati URL tidak valid: {url}")
             continue
-        is_active = check_server_status(host, port)
+        is_active, latency = check_server_status(host, port)
         if is_active:
             active_urls.append(url)
-            print(f"Aktif: {url}")
+            print(f"Aktif: {url} (Latensi ke {BUG_OPERATOR}: {latency if latency else 'TLS only'} ms)")
         else:
             print(f"Tidak aktif: {url}")
 
