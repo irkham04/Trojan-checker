@@ -2,8 +2,8 @@ name: Trojan VPN Checker
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Run every hour
-  workflow_dispatch:  # Allow manual trigger
+    - cron: '0 * * * *'  # Jalankan setiap jam
+  workflow_dispatch:  # Izinkan pemicu manual
 
 jobs:
   check-trojan:
@@ -30,17 +30,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          if ls active_trojan_urls_*.txt >/dev/null 2>&1; then
-            git add active_trojan_urls_*.txt
-            git commit -m "Update active Trojan URLs - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-            git push
-          else
-            echo "No active Trojan URLs found, creating placeholder file"
-            echo "No active Trojan URLs found on $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > no_active_urls.txt
-            git add no_active_urls.txt
-            git commit -m "No active Trojan URLs found - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-            git push
-          fi
+          git add active_trojan_urls_*.txt
+          git commit -m "Update Trojan URLs check - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -48,7 +40,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: trojan-check-results
-          path: |
-            active_trojan_urls_*.txt
-            no_active_urls.txt
+          path: active_trojan_urls_*.txt
           retention-days: 7
