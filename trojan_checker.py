@@ -6,8 +6,17 @@ import socket
 import subprocess
 import platform
 from urllib.parse import urlparse
-# Silent Speedtest check
-import speedtest
+import sys
+import subprocess as sp
+
+# Coba import speedtest, kalau tidak ada install dulu
+try:
+    import speedtest
+except ImportError:
+    print("Module 'speedtest-cli' tidak ditemukan. Sedang menginstall...")
+    sp.check_call([sys.executable, "-m", "pip", "install", "speedtest-cli"])
+    import speedtest
+    print("Instalasi speedtest-cli berhasil.\n")
 
 # Host bug operator
 BUG_OPERATOR = "quiz.vidio.com"
@@ -103,7 +112,7 @@ def fetch_server_list(file_path):
 def silent_speedtest_check():
     try:
         st = speedtest.Speedtest()
-        st.get_best_server()  # Ambil info server
+        st.get_best_server()
         return True
     except:
         return False
