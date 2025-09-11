@@ -1,12 +1,13 @@
 import requests
 import re
 import base64
-from datetime import datetime
 import ssl
 import socket
 import subprocess
 import platform
 from urllib.parse import urlparse
+# Silent Speedtest check
+import speedtest
 
 # Host bug operator
 BUG_OPERATOR = "quiz.vidio.com"
@@ -51,7 +52,7 @@ def check_server_status(ip_or_host, port):
         print(f"Error TLS handshake untuk {ip_or_host}:{port}: {str(e)}")
         return False, None
 
-# Fungsi parsing URL Trojan (lebih fleksibel)
+# Fungsi parsing URL Trojan
 def parse_trojan_urls(data):
     pattern = r'trojan://[^\s]+'
     return re.findall(pattern, data)
@@ -98,6 +99,15 @@ def fetch_server_list(file_path):
     except:
         return []
 
+# Silent Speedtest check, return True/False
+def silent_speedtest_check():
+    try:
+        st = speedtest.Speedtest()
+        st.get_best_server()  # Ambil info server
+        return True
+    except:
+        return False
+
 # Fungsi utama
 def main():
     server_file = "servers.txt"
@@ -126,8 +136,13 @@ def main():
 
         is_active, latency = check_server_status(host, port)
         if is_active:
-            active_urls.append(url)
-            print(f"Aktif: {url} (Latensi: {latency if latency else 'TLS only'} ms)\n")
+            # Silent Speedtest check
+            speedtest_ok = silent_speedtest_check()
+            if speedtest_ok:
+                active_urls.append(url)
+                print(f"Aktif: {url} (Latensi: {latency if latency else 'TLS only'} ms)\n")
+            else:
+                print(f"Akun lolos TLS/ping tapi gagal tes Speedtest, tidak dimasukkan: {url}\n")
         else:
             print(f"Tidak aktif: {url}\n")
 
