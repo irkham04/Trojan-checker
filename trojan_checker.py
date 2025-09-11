@@ -5,6 +5,8 @@ from datetime import datetime
 import ssl
 import socket
 import subprocess
+import platform
+from urllib.parse import urlparse
 
 # Host bug operator
 BUG_OPERATOR = "quiz.vidio.com"
@@ -18,17 +20,24 @@ def check_server_status(ip_or_host, port):
             with context.wrap_socket(sock, server_hostname=ip_or_host) as ssock:
                 ssock.settimeout(5)
                 print(f"Sukses: TLS handshake berhasil untuk {ip_or_host}:{port}")
-                # Ping ke bug operator
+
+                # Ping ke bug operator (sesuai OS)
                 try:
+                    system = platform.system().lower()
+                    if "windows" in system:
+                        ping_cmd = ['ping', '-n', '1', BUG_OPERATOR]
+                    else:
+                        ping_cmd = ['ping', '-c', '1', BUG_OPERATOR]
+
                     ping_result = subprocess.run(
-                        ['ping', '-c', '1', BUG_OPERATOR],
+                        ping_cmd,
                         stdout=subprocess.PIPE,
                         stderr=subprocess.PIPE,
                         timeout=5,
                         text=True
                     )
                     if ping_result.returncode == 0:
-                        latency_match = re.search(r'time=(\d+\.\d+) ms', ping_result.stdout)
+                        latency_match = re.search(r'time[=<](\d+\.?\d*) ?ms', ping_result.stdout)
                         latency = latency_match.group(1) if latency_match else "Unknown"
                         print(f"Ping sukses ke {BUG_OPERATOR} (Latensi: {latency} ms)")
                         return True, latency
@@ -42,17 +51,17 @@ def check_server_status(ip_or_host, port):
         print(f"Error TLS handshake untuk {ip_or_host}:{port}: {str(e)}")
         return False, None
 
-# Fungsi parsing URL Trojan
+# Fungsi parsing URL Trojan (lebih fleksibel)
 def parse_trojan_urls(data):
-    pattern = r'trojan://[a-zA-Z0-9\-]+@[a-zA-Z0-9\.\-]+:[0-9]+(?:\?[^#\s]*)?(?:#[^\s]*)?'
+    pattern = r'trojan://[^\s]+'
     return re.findall(pattern, data)
 
 # Fungsi ambil host:port dari URL
 def extract_host_and_port_from_url(url):
     try:
-        host_port = url.split('@')[1].split('#')[0]
-        host = host_port.split(':')[0]
-        port = int(host_port.split(':')[1].split('?')[0])
+        parsed = urlparse(url)
+        host = parsed.hostname
+        port = parsed.port
         return host, port
     except:
         return None, None
@@ -97,9 +106,11 @@ def main():
     trojan_urls = fetch_server_list(server_file)
     active_urls = []
     
-    print("Memeriksa server...")
+    print(f"Total akun Trojan ditemukan: {len(trojan_urls)}")
+    print("Memeriksa server...\n")
+    
     for url in trojan_urls:
-        # Paksa ganti host setelah @ dengan quiz.vidio.com
+        # Paksa ganti host dengan BUG_OPERATOR
         try:
             user_pass, rest = url.split("@", 1)
             if ":" in rest:
@@ -116,17 +127,24 @@ def main():
         is_active, latency = check_server_status(host, port)
         if is_active:
             active_urls.append(url)
-            print(f"Aktif: {url} (Latensi: {latency if latency else 'TLS only'} ms)")
+            print(f"Aktif: {url} (Latensi: {latency if latency else 'TLS only'} ms)\n")
         else:
-            print(f"Tidak aktif: {url}")
+            print(f"Tidak aktif: {url}\n")
 
+    # Simpan hasil
     with open(output_file, 'w') as f:
         if active_urls:
             f.write("\n".join(active_urls))
-            print(f"\nURL Trojan aktif disimpan ke {output_file}")
         else:
             f.write("Tidak ada URL Trojan aktif yang ditemukan.")
-            print(f"\nTidak ada URL Trojan aktif, disimpan ke {output_file}")
+
+    # Ringkasan hasil
+    print("\n=== RINGKASAN ===")
+    print(f"Akun aktif: {len(active_urls)} dari {len(trojan_urls)} total akun")
+    if len(trojan_urls) > 0:
+        persen = (len(active_urls) / len(trojan_urls)) * 100
+        print(f"Persentase aktif: {persen:.2f}%")
+    print(f"Hasil disimpan ke {output_file}")
 
 if __name__ == "__main__":
     main()
