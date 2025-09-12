@@ -182,6 +182,9 @@ trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=Telegram#%F0%9F%87%B1%F0%9F%87%BA%20%E5%8D%A2%E6%A3%AE%E5%A0%A1%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2F%E7%94%B1%E9%9B%B6%E5%BC%80%E5%A7%8B#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2F%2F%E7%94%B1%E9%9B%B6%E5%BC%80%E5%A7%8B#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2F%E7%94%B1%E9%9B%B6%E5%BC%80%E5%A7%8B#%F0%9F%87%B7%F0%9F%87%BA%20RU%E4%BF%84%E7%BD%97%E6%96%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2FTelegramU0001F1E8U0001F1F3#%F0%9F%87%B7%F0%9F%87%BA%20RU%E4%BF%84%E7%BD%97%E6%96%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
+trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2FTelegram#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2F%E7%94%B1%E9%9B%B6%E5%BC%80%E5%A7%8B#%F0%9F%87%BA%F0%9F%87%B8%20US%E7%BE%8E%E5%9B%BD%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2F%E7%94%B1%E9%9B%B6%E5%BC%80%E5%A7%8B#%F0%9F%87%B7%F0%9F%87%BA%20RU%E4%BF%84%E7%BD%97%E6%96%AF%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&ws=1&wspath=%2FTelegram#%F0%9F%87%B3%F0%9F%87%B1%20NL%E8%8D%B7%E5%85%B0%28mibei77.com%20%E7%B1%B3%E8%B4%9D%E8%8A%82%E7%82%B9%E5%88%86%E4%BA%AB%29
@@ -200,8 +203,6 @@ trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Teleg
 trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/TelegramU0001F1E8U0001F1F3&host=ocost-dy.wmlefl.cc#%E6%9C%AA%E7%9F%A55
 trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Telegram&host=ocost-dy.wmlefl.cc#%E6%9C%AA%E7%9F%A56
 trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Telegram🇮🇷ShadowProxy66&host=ocost-dy.wmlefl.cc#US2
-trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Telegram🇮🇷ShadowProxy66&host=ocost-dy.wmlefl.cc#US3
-trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Telegram&host=ocost-dy.wmlefl.cc#%E6%9C%AA%E7%9F%A57
 trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/TelegramU0001F1E8U0001F1F3&host=ocost-dy.wmlefl.cc#%E6%9C%AA%E7%9F%A58
 trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Telegram&host=ocost-dy.wmlefl.cc#US4
 trojan://slch2024@quiz.vidio.com:2096?type=ws&sni=ocost-dy.wmlefl.cc&path=/Telegram&host=ocost-dy.wmlefl.cc#%E6%9C%AA%E7%9F%A59
@@ -384,9 +385,11 @@ trojan://Julius@quiz.vidio.com:443?security=tls#[🇺🇸]ae_proxy
 trojan://bpb-trojan@quiz.vidio.com:443?security=tls&sni=403b3611-99BC-43B7-88D7-26eD5d0825a9-3.PagES.DEv&type=tcp#@awlix_ir
 trojan://bpb-trojan@quiz.vidio.com:443?security=tls&sni=cf.090227.xyz&allowInsecure=1&type=tcp#@awlix_ir
 trojan://bpb-trojan@quiz.vidio.com:443?security=tls&sni=403b3611-99bc-43b7-88D7-26Ed5D0825A9-3.paGeS.dev&type=tcp#@awlix_ir
+trojan://c16a577c-1dbd-41b0-90c7-d7177ce0bd1f@quiz.vidio.com:443?mode=auto&path=/xhttp&security=tls&alpn=h2&type=xhttp&sni=nl.xtls.sitespeedtest.net#⚡️@Takv2ray_org
 trojan://c16a577c-1dbd-41b0-90c7-d7177ce0bd1f@quiz.vidio.com:443?mode=auto&path=/xhttp&security=tls&alpn=h2&type=xhttp&sni=nl.xtls.sitespeedtest.net#💎کانفیگ
 trojan://er668@quiz.vidio.com:443?path=/?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN&security=tls&fp=chrome&type=ws#@HiByeVPNN👈⚡❤️‍🔥
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&fp=chrome&type=ws&sni=vpn.stupidworld.web.id#@Selinc
+trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&fp=chrome&type=ws&sni=vpn.stupidworld.web.id#@Takv2ray_org
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#@Selinc
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#All-@IRAN_V2RAY1
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#Channel
@@ -410,9 +413,6 @@ trojan://ZU%290ryc%24VSrG@quiz.vidio.com:443?path=%2Ftrg2dhGAnG15ULOP7i%3Fed%3D2
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=%2Faioproxybot%2F129.150.49.58-18650&security=tls&host=aio.zipzap.biz.id&type=ws&sni=aio.zipzap.biz.id#%3E%3E%40outlinev2rayng%3A%3AUS
 trojan://2ee85121-31de-4581-a492-eb00f606e392@quiz.vidio.com:443?security=tls&sni=sto.freeguard.org#%F0%9F%87%B8%F0%9F%87%AASE-45.91.171.116-5496
 trojan://2ee85121-31de-4581-a492-eb00f606e392@quiz.vidio.com:443?security=tls&sni=hk.freeguard.org#%F0%9F%87%AD%F0%9F%87%B0HK-103.252.116.138-5460
-trojan://2ee85121-31de-4581-a492-eb00f606e392@quiz.vidio.com:443?security=tls&sni=dus.freeguard.org#%F0%9F%87%A9%F0%9F%87%AADE-185.208.207.217-0321
-trojan://2ee85121-31de-4581-a492-eb00f606e392@quiz.vidio.com:443?security=tls&sni=rc8.freeguard.org#%F0%9F%87%BA%F0%9F%87%B8US-192.3.107.252-0323
-trojan://2ee85121-31de-4581-a492-eb00f606e392@quiz.vidio.com:443?security=tls&sni=sj3.freeguard.org#%F0%9F%87%BA%F0%9F%87%B8US-198.46.152.83-0324
 trojan://318cab24-ec99-40a6-a54a-0db9c661a3d0@quiz.vidio.com:443?security=tls&sni=aio.proxybox.dpdns.org&type=ws&host=aio.proxybox.dpdns.org&path=%2F188.34.160.97-2053#%40Daily_Configs
 trojan://745654@quiz.vidio.com:443?security=tls&headerType=none&fp=chrome&type=tcp&sni=hk.cestbon.work#%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%AF%D8%A7%D8%A6%D9%85%DB%8C%20%D8%AC%D9%88%DB%8C%D9%86%20%D8%B4%D9%88%F0%9F%8D%81%20TelegramID%20%E2%8C%B2Express_freevpn
 trojan://slch2024@quiz.vidio.com:2096?path=%2FTelegram&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%AF%D8%A7%D8%A6%D9%85%DB%8C%20%D8%AC%D9%88%DB%8C%D9%86%20%D8%B4%D9%88%F0%9F%AB%86%20TelegramID%20%E2%8C%B2Express_freevpn%20%F0%9F%AA%A9
