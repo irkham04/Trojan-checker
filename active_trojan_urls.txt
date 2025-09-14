@@ -155,6 +155,9 @@ trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&typ
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram🇨🇳#ES_speednode_0026
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram@ShadowProxy66#ES_speednode_0027
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/由零开始#ES_speednode_0028
+trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram#ES_speednode_0029
+trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/由零开始#ES_speednode_0030
+trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram#ES_speednode_0031
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram@ShadowProxy66#FR_speednode_0032
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/由零开始#FR_speednode_0033
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram🇨🇳#FR_speednode_0034
@@ -188,9 +191,6 @@ trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&typ
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram🇨🇳#US_speednode_0062
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram#US_speednode_0063
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram@ShadowProxy66#US_speednode_0064
-trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/由零开始#US_speednode_0065
-trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram🇨🇳#US_speednode_0066
-trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram#US_speednode_0067
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/由零开始#US_speednode_0068
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/#US_speednode_0069
 trojan://slch2024@quiz.vidio.com:2096?allowInsecure=0&sni=ocost-dy.wmlefl.cc&type=ws&host=ocost-dy.wmlefl.cc&path=/Telegram#US_speednode_0070
@@ -234,7 +234,6 @@ trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-Wo
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/--TELEGRAM-VITUREY----TELEGRAM-VITUREY----TELEGRAM-VITUREY----TELEGRAM-VITUREY&security=tls&host=vpn.stupidworld.web.id&fp=chrome&type=ws&sni=vpn.stupidworld.web.id#☞
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#@Selinc
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#All-@IRAN_V2RAY1
-trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#Channel
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/Stupid-World/103.106.228.126-2053&security=tls&host=vpn.stupidworld.web.id&type=ws&sni=vpn.stupidworld.web.id#🇯🇵@FreakConfig
 trojan://f282b878-8711-45a1-8c69-5564172123c1@quiz.vidio.com:443?path=/--TELEGRAM-VITUREY----TELEGRAM-VITUREY----TELEGRAM-VITUREY----TELEGRAM-VITUREY&security=tls&host=vpn.stupidworld.web.id&fp=chrome&type=ws&sni=vpn.stupidworld.web.id#☞
 trojan://juzi@quiz.vidio.com:2096?security=tls&sni=juzi8186-sr1.pages.dev&type=tcp#@awlix_ir
@@ -242,10 +241,8 @@ trojan://juzi@quiz.vidio.com:443?security=tls&sni=juzi8186-sr1.pages.dev&type=tc
 trojan://slch2024@quiz.vidio.com:2096?path=/Telegram&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#[🏁]
 trojan://slch2024@quiz.vidio.com:2096?path=/Telegram@ShadowProxy66&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#Channel
 trojan://slch2024@quiz.vidio.com:2096?path=/Telegram@ShadowProxy66&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#Channel
-trojan://slch2024@quiz.vidio.com:2096?path=Telegram🇮🇷@ShadowProxy66&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#Channel
 trojan://slch2024@quiz.vidio.com:2096?path=Telegram@V2rayAlpha&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#All-@IRAN_V2RAY1
 trojan://slch2024@quiz.vidio.com:2096?path=Telegram&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#[🇩🇪]
-trojan://slch2024@quiz.vidio.com:2096?path=/Telegram🇮🇷@ShadowProxy66&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#Channel
 trojan://slch2024@quiz.vidio.com:2096?note=JOIN----AZADIV2RAYY----JOIN----AZADIV2RAYY----JOIN---AZADIV2RAYY-‐-JOIN---AZADIV2RAYY-----bia-‐--AZADIV2RAYY---Bia---AZADIV2RAYY&path=/&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#AZADIV2RAYY
 trojan://slch2024@quiz.vidio.com:2096?path=Telegram&security=tls&host=ocost-dy.wmlefl.cc&type=ws&sni=ocost-dy.wmlefl.cc#WiFi-@IRAN_V2RAY1
 trojan://trojan@quiz.vidio.com:443?path=/?ed&security=tls&host=azadnet2-dl4.pages.dev&fp=chrome&type=ws&sni=azadnet2-dl4.pages.dev#سرویس
