@@ -118,7 +118,7 @@ def check_server_status(host, port, timeout_conn=6):
                     if "windows" in system:
                         ping_cmd = ['ping', '-n', '1', BUG_OPERATOR]
                     else:
-                        ping_cmd = ['ping', '-c', '1', BUG_OPERATOR']
+                        ping_cmd = ['ping', '-c', '1', BUG_OPERATOR]
 
                     ping_result = subprocess.run(
                         ping_cmd,
