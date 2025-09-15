@@ -2,7 +2,7 @@ name: VPN Checker (trojan + vless + vmess)
 
 on:
   schedule:
-    - cron: '0 * * * *'  # setiap jam
+    - cron: '0 0 */3 * *'  # jalan tiap 3 hari sekali jam 00:00 UTC
   workflow_dispatch:
 
 jobs:
