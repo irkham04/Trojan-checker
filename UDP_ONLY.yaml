@@ -1,3 +1,4 @@
+proxies:
 - name: Trojan UDP_trojan_5914
   server: quiz.vidio.com
   port: 443
