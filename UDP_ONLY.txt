@@ -1,0 +1,29 @@
+- name: Trojan UDP_trojan_5914
+  server: quiz.vidio.com
+  port: 443
+  type: trojan
+  password: t.me/foolvpn
+  sni: sg1.foolvpn.me
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /trojan-udp
+    headers:
+      Host: sg1.foolvpn.me
+- name: VMESS UDP_vmess_5641
+  server: 104.18.2.2
+  port: 80
+  type: vmess
+  uuid: 1760dc4d-4ed4-4b97-8236-a3f55c8b7e8b
+  alterId: 0
+  cipher: auto
+  tls: false
+  servername: sg1.foolvpn.me
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess-udp
+    headers:
+      Host: sg1.foolvpn.me
