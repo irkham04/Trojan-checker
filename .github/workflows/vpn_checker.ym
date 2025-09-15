@@ -1,0 +1,80 @@
+name: VPN Checker (trojan + vless + vmess)
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # setiap jam
+  workflow_dispatch:
+
+jobs:
+  check-vpn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests speedtest-cli; fi
+
+      - name: Run VPN checker
+        run: |
+          python vpn_checker.py
+
+      - name: Show summary files
+        run: |
+          echo "==== active_trojan_urls.txt ===="
+          sed -n '1,120p' active_trojan_urls.txt || true
+          echo "==== active_vless_urls.txt ===="
+          sed -n '1,120p' active_vless_urls.txt || true
+          echo "==== active_vmess_urls.txt ===="
+          sed -n '1,120p' active_vmess_urls.txt || true
+          echo "==== active_all_urls.txt ===="
+          sed -n '1,120p' active_all_urls.txt || true
+
+      - name: Setup Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit results if changed
+        run: |
+          git add active_trojan_urls.txt active_vless_urls.txt active_vmess_urls.txt active_all_urls.txt || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update VPN check results - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          fi
+
+      - name: Push changes
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git pull --rebase origin main || true
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git HEAD:main || true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vpn-check-results
+          path: |
+            active_trojan_urls.txt
+            active_vless_urls.txt
+            active_vmess_urls.txt
+            active_all_urls.txt
+          retention-days: 7
