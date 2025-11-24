@@ -1,6 +1,6 @@
 proxies:
 - name: Trojan UDP_trojan_5914
-  server: quiz.vidio.com
+  server: 104.18.1.196
   port: 443
   type: trojan
   password: t.me/foolvpn
@@ -13,7 +13,7 @@ proxies:
     headers:
       Host: sg1.foolvpn.me
 - name: VMESS UDP_vmess_5641
-  server: 104.18.2.2
+  server: 104.18.1.196
   port: 80
   type: vmess
   uuid: 1760dc4d-4ed4-4b97-8236-a3f55c8b7e8b
